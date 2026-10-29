@@ -1,0 +1,26 @@
+name: Build and run experiments
+on:
+  push:
+    paths:
+      - '**.cpp'
+      - '.github/workflows/run.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and run all six experiments
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/oop-lab
+          for n in 1 2 3 4 5 6; do
+            folder="EXPERIMENT 0$n"
+            g++ -std=c++17 -Wall -Wextra -pedantic "$folder/Experiment$n.cpp" -o "/tmp/oop-lab/experiment$n"
+            echo "BEGIN_EXPERIMENT_$n"
+            "/tmp/oop-lab/experiment$n"
+            echo "END_EXPERIMENT_$n"
+          done
