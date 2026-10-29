@@ -19,7 +19,7 @@ jobs:
           mkdir -p /tmp/oop-lab
           for n in 1 2 3 4 5 6; do
             folder="EXPERIMENT 0$n"
-            g++ -std=c++17 -Wall -Wextra -pedantic "$folder/Experiment$n.cpp" -o "/tmp/oop-lab/experiment$n"
+            g++ -std=c++17 -Wall -Wextra -Werror -pedantic "$folder/Experiment$n.cpp" -o "/tmp/oop-lab/experiment$n"
             echo "BEGIN_EXPERIMENT_$n"
             "/tmp/oop-lab/experiment$n"
             echo "END_EXPERIMENT_$n"

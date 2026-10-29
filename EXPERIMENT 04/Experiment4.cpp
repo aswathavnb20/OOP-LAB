@@ -47,13 +47,15 @@ int main() {
     std::cout << "passed\n10000 insertions and removals per container\n";
     measure("Template stack", [] { LabStack<int> s; long long total=0;
         for(int i=0;i<10000;++i) s.push(i);
-        for(int i=0;i<10000;++i) total+=s.pop(); return total; });
+        for(int i=0;i<10000;++i) { total+=s.pop(); }
+        return total; });
     measure("STL stack", [] { std::stack<int> s; long long total=0;
         for(int i=0;i<10000;++i) s.push(i);
         for(int i=0;i<10000;++i) { total+=s.top(); s.pop(); } return total; });
     measure("Template queue", [] { LabQueue<int> q; long long total=0;
         for(int i=0;i<10000;++i) q.enqueue(i);
-        for(int i=0;i<10000;++i) total+=q.dequeue(); return total; });
+        for(int i=0;i<10000;++i) { total+=q.dequeue(); }
+        return total; });
     measure("STL queue", [] { std::queue<int> q; long long total=0;
         for(int i=0;i<10000;++i) q.push(i);
         for(int i=0;i<10000;++i) { total+=q.front(); q.pop(); } return total; });
