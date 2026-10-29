@@ -1,0 +1,8 @@
+Stack removal: 30 20 10
+Queue removal: 10 20 30
+Underflow checks: passed
+10000 insertions and removals per container
+Template stack: 433 us; checksum=49995000
+STL stack: 250 us; checksum=49995000
+Template queue: 227 us; checksum=49995000
+STL queue: 240 us; checksum=49995000

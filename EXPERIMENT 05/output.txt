@@ -1,0 +1,8 @@
+Grade analysis (highest score first)
+Student 2 | 94 | A
+Aswath | 88 | B
+Student 3 | 67 | C
+Student 4 | 42 | F
+Total: 291
+Average: 72.75
+First distinction: Student 2

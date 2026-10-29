@@ -1,0 +1,4 @@
+Areas through a common virtual interface
+Circle: 28.27 square units
+Rectangle: 28.00 square units
+Triangle: 15.00 square units

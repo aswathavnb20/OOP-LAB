@@ -1,0 +1,6 @@
+Object lifetime demonstration
+Constructor: record opened
+Record number: 20
+Student: Aswath
+Destructor: record closed
+Scope finished

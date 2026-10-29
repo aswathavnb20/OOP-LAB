@@ -1,0 +1,16 @@
+Custom RAII owner
+Acquire session 1
+Use session 1
+Release session 1
+Unique ownership transfer
+Acquire session 2
+Original owner empty: true
+Use session 2
+Release session 2
+Shared ownership and weak observation
+Acquire session 3
+Owners: 2
+Use session 3
+Owners after inner scope: 1
+Release session 3
+Observer expired: true
